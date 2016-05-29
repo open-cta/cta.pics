@@ -1,5 +1,5 @@
 SystemJS.config({
-  production: true,
+  production: false,
   paths: {
     "github:": "jspm_packages/github/",
     "npm:": "jspm_packages/npm/",
@@ -10,17 +10,11 @@ SystemJS.config({
   },
   devConfig: {
     "map": {
-      "typescript": "npm:typescript@1.8.10",
-      "os": "github:jspm/nodelibs-os@0.2.0-alpha"
+      "typescript": "npm:typescript@1.8.10"
     },
     "packages": {
       "npm:typescript@1.8.10": {
         "map": {}
-      },
-      "github:jspm/nodelibs-os@0.2.0-alpha": {
-        "map": {
-          "os-browserify": "npm:os-browserify@0.2.1"
-        }
       }
     }
   },
@@ -171,6 +165,7 @@ SystemJS.config({
     "bluebird": "npm:bluebird@3.4.0",
     "browser-request": "npm:browser-request@0.3.3",
     "jquery": "npm:jquery@2.2.4",
+    "os": "github:jspm/nodelibs-os@0.2.0-alpha",
     "page": "npm:page@1.7.1",
     "process": "github:jspm/nodelibs-process@0.2.0-alpha",
     "underscore": "npm:underscore@1.8.3"
@@ -190,6 +185,11 @@ SystemJS.config({
     "npm:path-to-regexp@1.2.1": {
       "map": {
         "isarray": "npm:isarray@0.0.1"
+      }
+    },
+    "github:jspm/nodelibs-os@0.2.0-alpha": {
+      "map": {
+        "os-browserify": "npm:os-browserify@0.2.1"
       }
     }
   }

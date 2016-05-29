@@ -41,7 +41,7 @@ async function updateDOM(url){
 }
 
 // get the URL and update the dom
-export async function getGifAndUpdateDOM(stationName){
+export default async function getGifAndUpdateDOM(stationName){
     let url = await getGif(stationName)
     updateDOM(url)   
 }
