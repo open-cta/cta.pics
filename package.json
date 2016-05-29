@@ -1,4 +1,11 @@
 {
+  "name": "vis",
+  "version": "0.0.0",
+  "license": "mit",
+  "author": {
+    "name": "Brett Neese",
+    "email": "brett@neese.rocks"
+  },
   "scripts": {
     "start": "./node_modules/live-server/live-server.js ."
   },
