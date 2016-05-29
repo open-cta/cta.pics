@@ -1,5 +1,5 @@
 import getGifAndUpdateDOM from 'gif.js'
-var api = wss://wss-cta-dtuvbhhapp.now.sh
+var api = 'wss://wss-cta-dtuvbhhapp.now.sh'
 
 // Read a page's GET URL variables and return them as an associative array.
 function getUrlVars()
