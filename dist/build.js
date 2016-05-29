@@ -11390,32 +11390,6 @@ System.register("lib/main.js", ["npm:jquery@2.2.4.js", "npm:browser-request@0.3.
     };
     var jquery_1, browser_request_1, bluebird_1;
     var request;
-    function bootstrap() {
-        // http://usualcarrot.com/nodejs-and-websocket-simple-chat-tutorial
-        // if user is running mozilla then use it's built-in WebSocket
-        window.WebSocket = window.WebSocket || window.MozWebSocket;
-        var connection = new WebSocket('wss://wss-cta-baajkuhmym.now.sh');
-        connection.onopen = function () {
-            console.log('connected!');
-            connection.send('1460808468');
-        };
-        connection.onerror = function (error) {
-            console.log(error);
-        };
-        connection.onmessage = function (message) {
-            // try to decode json (I assume that each message from server is json)
-            try {
-                var json = JSON.parse(message.data);
-                getGifAndUpdateDOM(json.nextStaNm);
-                console.log(json.nextStaNm);
-            }
-            catch (error) {
-                console.log(error);
-                return;
-            }
-            // handle incoming message
-        };
-    }
     function getGif(term) {
         return __awaiter(this, void 0, void 0, function* () {
             var giphyUrl = 'https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=' + term;
@@ -11460,6 +11434,35 @@ System.register("lib/main.js", ["npm:jquery@2.2.4.js", "npm:browser-request@0.3.
             var url = yield getGif(stationName);
             updateDOM(url);
         });
+    }
+    function bootstrap() {
+        // http://usualcarrot.com/nodejs-and-websocket-simple-chat-tutorial
+        // if user is running mozilla then use it's built-in WebSocket
+        window.WebSocket = window.WebSocket || window.MozWebSocket;
+        var connection = new WebSocket('wss://wss-cta-dtuvbhhapp.now.sh');
+        connection.onopen = function () {
+            console.log('connected!');
+            if (window.location.hash) {
+                connection.send(window.location.hash);
+            }
+        };
+        connection.onerror = function (error) {
+            console.log(error);
+        };
+        connection.onmessage = function (message) {
+            // try to decode json (I assume that each message from server is json)
+            try {
+                var json = JSON.parse(message.data);
+                getGifAndUpdateDOM(json.nextStaNm);
+                window.location.hash = json.prdt;
+                console.log(json.nextStaNm);
+            }
+            catch (error) {
+                console.log(error);
+                return;
+            }
+            // handle incoming message
+        };
     }
     return {
         setters:[
