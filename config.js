@@ -14,6 +14,7 @@ System.config({
     "giphy": "npm:giphy@0.0.4",
     "giphy-api": "npm:giphy-api@1.1.16",
     "jquery": "npm:jquery@2.2.4",
+    "page": "npm:page@1.7.1",
     "typescript": "npm:typescript@1.8.10",
     "underscore": "npm:underscore@1.8.3",
     "github:jspm/nodelibs-assert@0.1.0": {
@@ -385,6 +386,10 @@ System.config({
     "npm:os-browserify@0.1.2": {
       "os": "github:jspm/nodelibs-os@0.1.0"
     },
+    "npm:page@1.7.1": {
+      "path-to-regexp": "npm:path-to-regexp@1.2.1",
+      "process": "github:jspm/nodelibs-process@0.1.2"
+    },
     "npm:pako@0.2.8": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.2"
@@ -400,6 +405,9 @@ System.config({
     },
     "npm:path-browserify@0.0.0": {
       "process": "github:jspm/nodelibs-process@0.1.2"
+    },
+    "npm:path-to-regexp@1.2.1": {
+      "isarray": "npm:isarray@0.0.1"
     },
     "npm:pbkdf2@3.0.4": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
