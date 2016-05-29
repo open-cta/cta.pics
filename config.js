@@ -6,6 +6,21 @@ System.config({
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*"
   },
+  bundles: {
+    "build.js": [
+      "lib/main.js",
+      "npm:bluebird@3.4.0.js",
+      "npm:bluebird@3.4.0/js/browser/bluebird.js",
+      "npm:browser-request@0.3.3.js",
+      "npm:browser-request@0.3.3/index.js",
+      "github:jspm/nodelibs-process@0.1.2.js",
+      "github:jspm/nodelibs-process@0.1.2/index.js",
+      "npm:process@0.11.3.js",
+      "npm:process@0.11.3/browser.js",
+      "npm:jquery@2.2.4.js",
+      "npm:jquery@2.2.4/dist/jquery.js"
+    ]
+  },
 
   map: {
     "bluebird": "npm:bluebird@3.4.0",

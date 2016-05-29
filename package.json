@@ -7,7 +7,7 @@
     "email": "brett@neese.rocks"
   },
   "scripts": {
-    "start": "./node_modules/live-server/live-server.js ."
+    "start": "./node_modules/.bin/live-server ."
   },
   "jspm": {
     "dependencies": {
@@ -20,6 +20,7 @@
     }
   },
   "dependencies": {
+    "jspm": "^0.16.35",
     "live-server": "^1.0.0"
   }
 }
