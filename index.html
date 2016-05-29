@@ -1,18 +1,17 @@
 <!doctype html>
+<meta charset="utf-8">
 <script src="jspm_packages/system.js"></script>
-<script src="https://jspm.io/system@0.19.js"></script>
-
-<script src="config.js"></script>
-<script src="dist/build.js"></script>
-
-<script>
-System.import('lib/main.js');
-</script>
+<script src="jspm.browser.js"></script>
+<script src="jspm.config.js"></script>
+<script src="app-bundle.js"></script>
 
 <head>
     <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
+    <script>
+        System.import('lib/main.js');
+    </script>
     <!-- http://slicejack.com/fullscreen-html5-video-background-css/ -->
     <div class="fullscreen-bg">
     </div>

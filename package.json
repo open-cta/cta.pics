@@ -7,9 +7,11 @@
     "email": "brett@neese.rocks"
   },
   "scripts": {
+    "prepublish": "jspm bundle src/main.js app-bundle.js --minify",
     "start": "./node_modules/.bin/live-server ."
   },
   "jspm": {
+    "main": "main.js",
     "dependencies": {
       "bluebird": "npm:bluebird@^3.4.0",
       "browser-request": "npm:browser-request@^0.3.3",
@@ -18,11 +20,40 @@
       "underscore": "npm:underscore@^1.8.3"
     },
     "devDependencies": {
+      "os": "github:jspm/nodelibs-os@^0.2.0-alpha",
       "typescript": "npm:typescript@^1.6.2"
+    },
+    "peerDependencies": {
+      "process": "github:jspm/nodelibs-process@^0.2.0-alpha"
+    },
+    "overrides": {
+      "npm:bluebird@3.4.0": {
+        "meta": {
+          "js/browser/bluebird.js": {
+            "format": "global"
+          },
+          "js/browser/bluebird.min.js": {
+            "format": "global"
+          }
+        }
+      },
+      "npm:jquery@2.2.4": {
+        "format": "amd"
+      },
+      "npm:typescript@1.8.10": {
+        "browser": {},
+        "map": {
+          "buffer": "@empty",
+          "child_process": "@empty",
+          "fs": "@empty",
+          "path": "@empty",
+          "process": "@empty",
+          "readline": "@empty"
+        }
+      }
     }
   },
   "dependencies": {
-    "jspm": "^0.16.35",
     "live-server": "^1.0.0"
   }
 }
