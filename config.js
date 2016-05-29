@@ -15,6 +15,7 @@ System.config({
     "giphy-api": "npm:giphy-api@1.1.16",
     "jquery": "npm:jquery@2.2.4",
     "typescript": "npm:typescript@1.8.10",
+    "underscore": "npm:underscore@1.8.3",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.4.0"
     },
