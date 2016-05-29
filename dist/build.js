@@ -11422,9 +11422,13 @@ System.register("lib/main.js", ["npm:jquery@2.2.4.js", "npm:browser-request@0.3.
             try {
                 var results = yield request(giphyUrl);
                 var response = JSON.parse(results.response);
-                var url = yield securify(response.data.image_mp4_url);
-                console.log(url);
-                return url;
+                if (response.data.image_mp4_url != null) {
+                    var url = yield securify(response.data.image_mp4_url);
+                    return url;
+                }
+                else {
+                    return null;
+                }
             }
             catch (error) {
                 return null;
@@ -11442,8 +11446,12 @@ System.register("lib/main.js", ["npm:jquery@2.2.4.js", "npm:browser-request@0.3.
     // inject the vide into the dom
     function updateDOM(url) {
         return __awaiter(this, void 0, void 0, function* () {
-            jquery_1.default(".fullscreen-bg__video").html('<source src="' + url + '" type="video/mp4"></source>');
-            jquery_1.default(".fullscreen-bg__video")[0].load();
+            if (url != undefined) {
+                jquery_1.default(".fullscreen-bg").append('<video loop muted autoplay poster="" class="fullscreen-bg__video"><source src="' + url + '" type="video/mp4"></source></video>');
+                if (jquery_1.default('.fullscreen-bg').find('video').length > 2) {
+                    jquery_1.default('.fullscreen-bg').find('video').first().remove();
+                }
+            }
         });
     }
     // get the URL and update the dom
