@@ -1,7 +1,7 @@
 import _ from 'underscore'
 import page from 'page'
-import getGifAndUpdateDOM from 'vis/gif.js'
-import * as api from 'vis/api.js'
+import getGifAndUpdateDOM from 'src/gif.js'
+import * as api from 'src/api.js'
 
 var wssurl = 'wss://wss-cta-mcbvfhypni.now.sh/'
 var connection = new WebSocket(wssurl)
