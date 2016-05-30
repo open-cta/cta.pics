@@ -1,0 +1,25 @@
+<!doctype html>
+<meta charset="utf-8">
+<script src="../jspm_packages/system.js"></script>
+<script src="../jspm.browser.js"></script>
+<script src="../jspm.config.js"></script>
+<script src="../app-bundle.js"></script>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../index.css">
+</head>
+<body>
+    <script>
+        System.import('src/main.js');
+    </script>
+    <!-- http://slicejack.com/fullscreen-html5-video-background-css/ -->
+    <div class="fullscreen-bg">
+        <a href=#>
+            <video loop muted autoplay class="fullscreen-bg__video" poster="https://media.giphy.com/media/l3nWhI38IWDofyDrW/200_s.gif">
+                <source src="https://media.giphy.com/media/l3nWhI38IWDofyDrW/giphy.mp4" type="video/mp4">
+                Your browser does not support the mp4 video codec.
+            </video>
+        </a>
+    </div>
+</body>
+</html>

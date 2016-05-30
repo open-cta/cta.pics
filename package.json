@@ -7,8 +7,8 @@
     "email": "brett@neese.rocks"
   },
   "scripts": {
-    "prepublish": "jspm bundle src/main.js app-bundle.js --minify",
-    "start": "./node_modules/.bin/live-server . ----entry-file=index.html"
+    "prepublish": "jspm bundle src/main.js www/app-bundle.js --minify",
+    "start": "node server.js"
   },
   "jspm": {
     "main": "main.js",
@@ -68,11 +68,6 @@
     }
   },
   "dependencies": {
-    "connect": "^3.4.1",
-    "connect-history-api-fallback": "^1.2.0",
-    "express": "^4.13.4",
-    "express-history-api-fallback": "^2.0.0",
-    "live-server": "^1.0.0",
-    "spa-express-static-server": "0.0.12"
+    "express": "^4.13.4"
   }
 }
