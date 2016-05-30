@@ -3,7 +3,7 @@ import page from 'page'
 import getGifAndUpdateDOM from 'vis/gif.js'
 import * as api from 'vis/api.js'
 
-var wssurl = 'ws://localhost:4200'
+var wssurl = 'wss://wss-cta-mcbvfhypni.now.sh/'
 var connection = new WebSocket(wssurl)
 var previousData = {}
 
