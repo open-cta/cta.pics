@@ -12,12 +12,21 @@
   },
   "jspm": {
     "main": "main.js",
+    "directories": {
+      "lib": "src",
+      "dist": "dist",
+      "baseURL": "www"
+    },
+    "configFiles": {
+      "jspm": "jspm.config.js"
+    },
     "dependencies": {
       "bluebird": "npm:bluebird@3.4.0",
       "browser-request": "npm:browser-request@^0.3.3",
       "jquery": "npm:jquery@^2.2.4",
       "page": "npm:page@^1.7.1",
-      "underscore": "npm:underscore@^1.8.3"
+      "underscore": "npm:underscore@^1.8.3",
+      "uri": "github:medialize/URI.js@^1.18.1"
     },
     "devDependencies": {
       "typescript": "npm:typescript@^1.6.2"
@@ -59,6 +68,11 @@
     }
   },
   "dependencies": {
-    "live-server": "^1.0.0"
+    "connect": "^3.4.1",
+    "connect-history-api-fallback": "^1.2.0",
+    "express": "^4.13.4",
+    "express-history-api-fallback": "^2.0.0",
+    "live-server": "^1.0.0",
+    "spa-express-static-server": "0.0.12"
   }
 }
