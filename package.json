@@ -8,7 +8,7 @@
   },
   "scripts": {
     "prepublish": "jspm bundle src/main.js app-bundle.js --minify",
-    "start": "./node_modules/.bin/live-server ."
+    "start": "./node_modules/.bin/live-server . ----entry-file=index.html"
   },
   "jspm": {
     "main": "main.js",

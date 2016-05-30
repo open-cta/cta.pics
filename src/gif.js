@@ -31,17 +31,17 @@ async function securify(url){
 }
 
 // inject the vide into the dom
-async function updateDOM(url){
+async function updateDOM(url, p){
     if (url != undefined) {
-        $(".fullscreen-bg").append('<video loop muted autoplay poster="" class="fullscreen-bg__video"><source src="' + url + '" type="video/mp4"></source></video>');
+        $(".fullscreen-bg").append('<a href="/follow/?rn=' + p.rn + '&ts=' + p.prdt + '"><video loop muted autoplay poster="" class="fullscreen-bg__video"><source src="' + url + '" type="video/mp4"></source></video></a>');
         if ($('.fullscreen-bg').find('video').length > 2) { 
-            $('.fullscreen-bg').find('video').first().remove();
+            $('.fullscreen-bg').find('a').first().remove();
         }
     }
 }
 
 // get the URL and update the dom
-export default async function getGifAndUpdateDOM(stationName){
-    let url = await getGif(stationName)
-    updateDOM(url)   
+export default async function getGifAndUpdateDOM(prediction){
+    let gifUrl = await getGif(prediction.nextStaNm)
+    updateDOM(gifUrl, prediction)   
 }
