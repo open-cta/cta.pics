@@ -21,7 +21,9 @@
       "bluebird": "npm:bluebird@3.4.0",
       "browser-request": "npm:browser-request@^0.3.3",
       "jquery": "npm:jquery@^2.2.4",
+      "monkeymonk/jquery-tubular": "github:monkeymonk/jquery-tubular@master",
       "page": "npm:page@^1.7.1",
+      "rochestb/jQuery.YoutubeBackground": "github:rochestb/jQuery.YoutubeBackground@^1.0.5",
       "underscore": "npm:underscore@^1.8.3",
       "uri": "github:medialize/URI.js@^1.18.1"
     },

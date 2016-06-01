@@ -2,6 +2,7 @@ import _ from 'underscore'
 import page from 'page'
 import getGifAndUpdateDOM from 'src/gif.js'
 import * as api from 'src/api.js'
+import tubular from 'src/tubular'
 
 var wssurl = 'wss://wss-cta-mcbvfhypni.now.sh/'
 var connection = new WebSocket(wssurl)
@@ -31,6 +32,15 @@ page('/*', function(ctx, next){
     } 
 });
 
+
+$('#background-sound').tubular({
+    videoId: 'UQ7oTzKTJpY',
+    repeat: true,
+    mute: false,
+    start: 60
+});
+
+$('#tubular-container').hide();
 
 // global websocket methods 
 connection.onerror = function (error) {

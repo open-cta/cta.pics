@@ -1,8 +1,6 @@
 System.config({
   defaultJSExtensions: true,
   transpiler: "babel",
-  production: true,
-
   babelOptions: {
     "optional": [
       "runtime",
@@ -22,6 +20,7 @@ System.config({
     "core-js": "npm:core-js@1.2.6",
     "jquery": "npm:jquery@2.2.4",
     "page": "npm:page@1.7.1",
+    "rochestb/jQuery.YoutubeBackground": "github:rochestb/jQuery.YoutubeBackground@1.0.5",
     "typescript": "npm:typescript@1.8.10",
     "underscore": "npm:underscore@1.8.3",
     "uri": "github:medialize/URI.js@1.18.1",
