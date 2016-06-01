@@ -32,15 +32,25 @@ page('/*', function(ctx, next){
     } 
 });
 
-
-$('#background-sound').tubular({
+$('#wrapper').tubular({
     videoId: 'UQ7oTzKTJpY',
     repeat: true,
     mute: false,
     start: 60
 });
 
-$('#tubular-container').hide();
+//$('#tubular-container').hide();
+
+$(function() {
+    $('body').hover(function() {
+        $('.fullscreen-bg').fadeTo('slow', 0.7);
+      },
+      function(){
+        $('.fullscreen-bg').fadeTo('slow', 1);
+      }
+   );
+});
+
 
 // global websocket methods 
 connection.onerror = function (error) {
