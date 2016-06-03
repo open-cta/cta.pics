@@ -2,7 +2,7 @@ import _ from 'underscore'
 import page from 'page'
 import getGifAndUpdateDOM from 'src/gif.js'
 import * as api from 'src/api.js'
-import tubular from 'src/tubular'
+import tubular from 'src/tubular.js'
 
 var wssurl = 'wss://wss-cta-mcbvfhypni.now.sh/'
 var connection = new WebSocket(wssurl)
