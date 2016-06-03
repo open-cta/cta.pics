@@ -32,25 +32,31 @@ page('/*', function(ctx, next){
     } 
 });
 
+function randomVideo(){
+    videoIds = ['UQ7oTzKTJpY', 'XoLTf7Yamzo', 'n6xJFpPY_7s', 'aWj3YetNJM4', 'fJzhNPKtR0Q', 'xGKSNvcO2VI', 
+                'xqMH6eMO', 'KK5YH5Kwshg', 'OEDho3XlN6M', '5Z49yrl5G2Q', 'ec0RRd88nN0', '_r8nFIuBRQA', 
+                'I-GkHVNwhY0', 'ctQkoQ_F7C4', 'n0zZlij52oc', 'MdkW1cpHpn0', 'dtHZgaFXAws', 'vU95BeDL2gE',
+                '70vcWVzRQRc', 'Kw_BbQoDv8o', 'VderjGmJljQ']
+   return _.sample(videoIds)
+}
+
 $('#wrapper').tubular({
-    videoId: 'UQ7oTzKTJpY',
+    videoId: randomVideo(),
     repeat: true,
     mute: false,
     start: 60
 });
 
 //$('#tubular-container').hide();
-
-$(function() {
-    $('body').hover(function() {
-        $('.fullscreen-bg').fadeTo('slow', 0.7);
-      },
-      function(){
-        $('.fullscreen-bg').fadeTo('slow', 1);
-      }
-   );
-});
-
+// $(function() {
+//     $('body').hover(function() {
+//         $('.fullscreen-bg').fadeTo('slow', 0.7);
+//       },
+//       function(){
+//         $('.fullscreen-bg').fadeTo('slow', 1);
+//       }
+//    );
+// });
 
 // global websocket methods 
 connection.onerror = function (error) {
