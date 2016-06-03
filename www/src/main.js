@@ -34,7 +34,7 @@ page('/*', function(ctx, next){
 
 function randomVideo(){
     videoIds = ['UQ7oTzKTJpY', 'XoLTf7Yamzo', 'n6xJFpPY_7s', 'aWj3YetNJM4', 'fJzhNPKtR0Q', 'xGKSNvcO2VI', 
-                'xqMH6eMO', 'KK5YH5Kwshg', 'OEDho3XlN6M', '5Z49yrl5G2Q', 'ec0RRd88nN0', '_r8nFIuBRQA', 
+                'xqMH6eMO-6Y', 'KK5YH5Kwshg', 'OEDho3XlN6M', '5Z49yrl5G2Q', 'ec0RRd88nN0', '_r8nFIuBRQA', 
                 'I-GkHVNwhY0', 'ctQkoQ_F7C4', 'n0zZlij52oc', 'MdkW1cpHpn0', 'dtHZgaFXAws', 'vU95BeDL2gE',
                 '70vcWVzRQRc', 'Kw_BbQoDv8o', 'VderjGmJljQ']
    return _.sample(videoIds)
